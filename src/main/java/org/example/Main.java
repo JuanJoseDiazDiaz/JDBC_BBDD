@@ -35,13 +35,13 @@ public class Main {
                     break;
                 case 5:
                     Consultas(user, password, urlConexion);
-                    System.out.println("Consulta satisfactoriamente hecha!!");
+
                     break;
                 case 6:
                     System.out.println("Adios!!");
                     break;
             }
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 
     // Metodos a usar
@@ -244,6 +244,9 @@ public class Main {
             }
             if (!encontradoUsuario) {
                 System.out.println("Error, IdUsuario no encontrado");
+            }
+            if (encontradoUsuario){
+                System.out.println("Consulta satisfactoriamente hecha!!");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
